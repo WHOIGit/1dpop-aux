@@ -243,7 +243,7 @@ subroutine CBalanceCheck(lbc, ubc, num_soilc, filter_soilc)
          (col_endcb(c) - col_begcb(c))
 
       ! check for significant errors
-      if (abs(col_errcb(c)) > 1e-7_r8) then
+      if (abs(col_errcb(c)) > 1e-6_r8) then
          err_found = .true.
          err_index = c
       end if
@@ -373,7 +373,7 @@ subroutine NBalanceCheck(lbc, ubc, num_soilc, filter_soilc)
       col_errnb(c) = (col_ninputs(c) - col_noutputs(c))*dt - &
          (col_endnb(c) - col_begnb(c))
 
-      if (abs(col_errnb(c)) > 1e-7_r8) then
+      if (abs(col_errnb(c)) > 1e-6_r8) then
          err_found = .true.
          err_index = c
       end if

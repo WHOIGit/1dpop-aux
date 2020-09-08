@@ -292,9 +292,9 @@ subroutine CNPrecisionControl(num_soilc, filter_soilc, num_soilp, filter_soilp)
     retransn                       => clm3%g%l%c%p%pns%retransn
 
    ! set the critical carbon state value for truncation (gC/m2)
-   ccrit = 1.e-7_r8
+   ccrit = 1.e-6_r8
    ! set the critical nitrogen state value for truncation (gN/m2)
-   ncrit = 1.e-7_r8
+   ncrit = 1.e-6_r8
 
    ! pft loop
    do fp = 1,num_soilp
